@@ -1,0 +1,80 @@
+POWERSHELL::
+
+//Code that allowed me to move all .txt files in desktop to an oldnotes folder on desktop
+PS C:\Users\mgricoski\desktop> mv *.txt ~/desktop/oldnotes
+
+
+LINUX:: (Linux subsystem for Windows, because you can't leave Bill hanging)
+//Print a list of items in a directory
+dir > whateveryoucallit.txt
+// use /s to get to subdirectories... use /b to remove junk
+dir /s /b > newname.txt
+//filter for specific file types
+dir *.jpg > jpgfilesonly.txt
+;the list all appears as one line, how to make each file a new line?
+
+
+TESSERACT COMMAND LINE:
+;You can access these all through commandline or though program you write using the API
+//Get the words in an image into a text file
+tesseract filename.jpg nameofoutputfile
+//OCR the words on to a pdf
+tesseract file.jpg ouputbase pdf
+//run multiple files through tesseract... You need a text file of all files you want to run.
+//if txt file is in folder wehre it will run, then you just need the name (e.g. name.jpg).  If it's not
+//then you might also need the path.  Either way each file has to be a new line.
+tesseract listofjpg.txt outputbase pdf
+//You can do this without PDF, but it will probably be too crazy.  
+
+GIT::
+//First change to the directory where you have your file to upload or whatever
+cd new folder/trash notes/
+//if you need to change to a new drive  you can use /d
+cd /d m:/new folder/trash/
+//If you want the status of what has changed from your directory to git?
+git status
+//if you see changes and want to bring them into your pc
+git pull
+//if you make awesome changes and want to send them to git
+git add .
+//then add a little commit to the change you want to make, make a note about it too
+git commit
+//then it will open a text editor and depending on program you have to write something and save it.
+//After you save you will then want to push your changes to git
+git push
+
+
+GIT COMMIT:
+//To save and exit their weird commit thing that isn't nano press esc and then
+:wq
+
+
+EMACS:
+;Captial "C" means "Ctrl" button, Captial "M" means "Alt" button.  All lowercase are actually keyboard letters
+//copy
+M-w
+//Paste
+C-y  ;As in why did you just waste your time learning a new paste cmd specific to only one IDE
+//Open that file you were working on
+C-x C-f
+//Save that file you were working on
+C-x C-s
+//You broke the REPL because you don't know what recursion means
+M-x
+//Push code from editor down to REPL only works if something remaind active in your buffer when you made it
+C-c C-c
+//Run code in scratch and print output in scratch (pretty pretty prettyyy good)
+C-j
+//To add a paranthesis because you are lost
+C-( ;this sucks because you have to press shift to get to the paranthesis
+//To then MOVE a closing parathesis to it's appropiate location, first highlight the closing parathesis
+C-"Left Arrow Key"
+//To give up on paredit mode, just for a little, because you came too far now to quit the superior ide (i.e TRAP)
+M-x Paredit-mode ;or something like that you just toggle it off and on in the minibuffer
+//You broke the minibuffer
+C-g ;This will get it to change topics instead of trying to keep talking about the same thing
+//Change back to the REPL buffer because you compiled really trash code
+C-x b
+//Pull your last line entered into the REPL
+C-"Up Arrow Key"
+
