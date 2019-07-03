@@ -15,6 +15,8 @@ dir *.jpg > jpgfilesonly.txt
 
 
 TESSERACT COMMAND LINE:
+//[tesseract][imagename][outputbase][-1 lang][-PSM pagesegmode][configfile...]
+    Start	input	  output	  ----------Options---------
 ;You can access these all through commandline or though program you write using the API
 //Get the words in an image into a text file
 tesseract filename.jpg nameofoutputfile
