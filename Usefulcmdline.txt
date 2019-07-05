@@ -1,5 +1,3 @@
-POWERSHELL::
-
 //Code that allowed me to move all .txt files in desktop to an oldnotes folder on desktop
 PS C:\Users\mgricoski\desktop> mv *.txt ~/desktop/oldnotes
 
@@ -14,8 +12,14 @@ dir *.jpg > jpgfilesonly.txt
 ;the list all appears as one line, how to make each file a new line?
 
 
+
+
+
+
 TESSERACT COMMAND LINE:
+
 //[tesseract][imagename][outputbase][-1 lang][-PSM pagesegmode][configfile...]
+
     Start	input	  output	  ----------Options---------
 ;You can access these all through commandline or though program you write using the API
 //Get the words in an image into a text file
@@ -79,4 +83,3 @@ C-g ;This will get it to change topics instead of trying to keep talking about t
 C-x b
 //Pull your last line entered into the REPL
 C-"Up Arrow Key"
-
